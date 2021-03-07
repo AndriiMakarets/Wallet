@@ -71,7 +71,7 @@ namespace Lab_01
             set { _customerGuid = value; }
         }
 
-         private List<Category> Categories{ get; set;}
+         public List<Category> Categories{ get; set;}
 
         public Wallet(Guid custGuid)
         {
