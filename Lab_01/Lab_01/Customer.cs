@@ -72,7 +72,7 @@ namespace Lab_01
            _categories.Add(new Category(Guid.NewGuid(), name, description, colore));
         }
 
-        public void AddCategoryToWallet(Wallet wallet Category category)
+        public void AddCategoryToWallet(Wallet wallet, Category category)
         {
          wallet.Categories.Add(category);
         }
