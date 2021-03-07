@@ -7,14 +7,12 @@ namespace Lab_01
 {
     class Transaction
     {
-        private static int InstanceCount;
-
-        private int _id;
-        private double _moneySum;
+        private Guid _guid;
+        private decimal _moneySum;
         private string _category;
         private string _description;
         private Currency _moneyCurrency;
-        private DateTime _transactionTime;
+        private DateTimeOffset _transactionTime;
         private Object _fileOfTransaction;
 
         //До транзакції додатково можна прикріплювати файли (зображення або текстові).
@@ -23,13 +21,12 @@ namespace Lab_01
         ////  imageList.Add(Bitmap.FromFile(YourFilePath));
 
 
-        public int Id
+        public Guid Guid
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _guid; }
         }
 
-        public double MoneySum
+        public decimal MoneySum
         {
             get { return _moneySum; }
             set { _moneySum = value; }
@@ -53,7 +50,7 @@ namespace Lab_01
             set { _moneyCurrency = value; }
         }
 
-        public DateTime TransactionTime
+        public DateTimeOffset TransactionTime
         {
             get { return _transactionTime; }
             set { _transactionTime = value; }
@@ -65,14 +62,14 @@ namespace Lab_01
             set { _fileOfTransaction = value; }
         }
 
-        public Transaction(int id)
+        public Transaction()
         {
-            _id = id;
+            _guid = Guid.NewGuid();
         }
 
-        public Transaction(int id, double moneySum, string category, string description, Currency moneyCurrency, Object file)
+        public Transaction(Guid guid, decimal moneySum, string category, string description, Currency moneyCurrency, Object file)
         {
-            _id = id;
+            _guid = guid;
             _moneySum = moneySum;
             _category = category;
             _description = description;
@@ -80,10 +77,9 @@ namespace Lab_01
             _fileOfTransaction = file;
         }
 
-        public void Show()
+        public override string ToString()
         {
-            Console.Write(" Category " + _category + " Sum: " + _moneySum + " Currency " + _moneyCurrency +
-                " Time: " + _transactionTime + " Description " + _description);
+            return $"Category: {_category} Sum: {_moneySum} Currency: {_moneyCurrency} Time: {_transactionTime} Description: {_description}";
         }
     }
 }

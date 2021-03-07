@@ -6,7 +6,8 @@ namespace Lab_01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Customer a = new Customer();
+           
         }
     }
 }

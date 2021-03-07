@@ -4,31 +4,44 @@ using System.Text;
 
 namespace Lab_01
 {
-    class Wallet
-    {
-        private static int InstanceCount;
 
-        private int _id;
+     interface UnchangeableWallet
+    {
+        public Guid Guid { get; }
+        public decimal CurrentBalance { get; }
+        public decimal InitialBalance { get; }
+        public string Name { get; }
+        public string Description { get; }
+        public Type MoneyCurrency { get; }
+        public Guid CustomerGuid { get; }
+        public void AddTransaction(Transaction tr);
+        public void ShowTransactions(int from);
+        public void ShowTransactions();
+    }
+
+    class Wallet : UnchangeableWallet
+    {
+        private Guid _guid;
         private string _name;
-        private double _initialBalance;
+        private decimal _initialBalance;
         private string _description;
         private Type _moneyCurrency;
-        private int _customerId;
+        private Guid _customerGuid;
         private List<Transaction> _transactions;
-        private double _currentBalance;
+        private decimal _currentBalance;
+        private List<Category> _categories;
 
-        public int Id
+        public Guid Guid
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _guid; }
         }
 
-        public double CurrentBalance
+        public decimal CurrentBalance
         {
             get { return _currentBalance; }
             set { _currentBalance = value; }
         }
-        public double InitialBalance
+        public decimal InitialBalance
         {
             get { return _initialBalance; }
             set { _initialBalance = value; }
@@ -52,27 +65,31 @@ namespace Lab_01
             set { _moneyCurrency = value; }
         }
 
-        public int CustomerId
+        public Guid CustomerGuid
         {
-            get { return _customerId; }
-            set { _customerId = value; }
+            get { return _customerGuid; }
+            set { _customerGuid = value; }
         }
 
-        public Wallet(int id, int custId)
+         private List<Category> Categories{ get; set;}
+
+        public Wallet(Guid custGuid)
         {
-            _id = id;
-            _customerId = custId;
+            _guid = Guid.NewGuid();
+            _customerGuid = custGuid;
             _transactions = new List<Transaction>();
+            _categories = new List<Category>();
         }
 
-        public Wallet(int id, string name, string desc, Type curr, int custId)
+        public Wallet(Guid guid, string name, string desc, Type curr, Guid custGuid)
         {
-            _id = id;
-            _customerId = custId;
+            _guid = guid;
+            _customerGuid = custGuid;
             _name = name;
             _description = desc;
             _moneyCurrency = curr;
             _transactions = new List<Transaction>();
+            _categories = new List<Category>();
         }
 
         public void AddTransaction(Transaction tr)
@@ -85,7 +102,7 @@ namespace Lab_01
         {
             for (int i=from; i<from+10; i++)
             {
-                _transactions[i].Show();
+                Console.WriteLine(_transactions[i].ToString());
             }
         }
 
@@ -93,17 +110,46 @@ namespace Lab_01
         {
             for (int i = 0; i <10; i++)
             {
-                _transactions[i].Show();
+                Console.WriteLine(_transactions[i].ToString());
             }
         }
 
-        public void DeleteTransaction(int trId)
+        public void DeleteTransaction(Guid trId)
         {
            for(int i = 0; i < _transactions.Count; i++)
             {
-                if (_transactions[i].Id == trId)
+                if (_transactions[i].Guid == trId)
                     _transactions[i] = null;
             }
         }
+
+        public decimal SumOfIncome()
+            {
+            decimal res=0;
+            for(int i = 0; i < _transactions.Count; i++)
+            {
+                if (_transactions[i].TransactionTime.AddMonths(1) > DateTime.Now)
+                {
+                    if (_transactions[i].MoneySum > 0)
+                        res += _transactions[i].MoneySum;
+                }
+            }
+            return res;
+            }
+
+        public decimal SumOfExpense()
+
+            {
+            decimal res=0;
+            for(int i = 0; i < _transactions.Count; i++)
+            {
+                if (_transactions[i].TransactionTime.AddMonths(1) > DateTime.Now)
+                {
+                    if (_transactions[i].MoneySum < 0)
+                        res += _transactions[i].MoneySum;
+                }
+            }
+            return res;
+            }
     }
 }

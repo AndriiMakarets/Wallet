@@ -7,19 +7,16 @@ namespace Lab_01
 {
     public class Category
     {
-        private static int InstanceCount;
-
-        private int _id;
+        private Guid _guid;
         private string _name;
         private string _description;
         private string _colore;
         private Object? _icon;
 
 
-        public int ID
+        public Guid Guid
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _guid; }
         }
         public string Name
         {
@@ -42,14 +39,22 @@ namespace Lab_01
             set { _icon = value; }
         }
 
-        public Category(int id)
+        public Category()
         {
-            _id = id;
+            _guid = Guid.NewGuid();
         }
 
-        public Category(int id, string name, string desc, string col, Object ic)
+        public Category(Guid guid, string name, string desc, string col)
         {
-            _id = id;
+            _guid = guid;
+            _name = name;
+            _description = desc;
+            _colore = col;
+        }
+
+        public Category(Guid guid, string name, string desc, string col, Object ic)
+        {
+            _guid = guid;
             _name = name;
             _description = desc;
             _colore = col;

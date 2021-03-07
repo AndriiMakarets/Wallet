@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dasha\\source\\repos\\AndriiMakarets\\Wallet\\Lab_01\\Lab_01\\Lab_01.csproj": {}
+    "C:\\Users\\Андрій\\Source\\Repos\\Wallet\\Lab_01\\Lab_01\\Lab_01.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dasha\\source\\repos\\AndriiMakarets\\Wallet\\Lab_01\\Lab_01\\Lab_01.csproj": {
+    "C:\\Users\\Андрій\\Source\\Repos\\Wallet\\Lab_01\\Lab_01\\Lab_01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dasha\\source\\repos\\AndriiMakarets\\Wallet\\Lab_01\\Lab_01\\Lab_01.csproj",
+        "projectUniqueName": "C:\\Users\\Андрій\\Source\\Repos\\Wallet\\Lab_01\\Lab_01\\Lab_01.csproj",
         "projectName": "Lab_01",
-        "projectPath": "C:\\Users\\dasha\\source\\repos\\AndriiMakarets\\Wallet\\Lab_01\\Lab_01\\Lab_01.csproj",
-        "packagesPath": "C:\\Users\\dasha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dasha\\source\\repos\\AndriiMakarets\\Wallet\\Lab_01\\Lab_01\\obj\\",
+        "projectPath": "C:\\Users\\Андрій\\Source\\Repos\\Wallet\\Lab_01\\Lab_01\\Lab_01.csproj",
+        "packagesPath": "C:\\Users\\Андрій\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Андрій\\Source\\Repos\\Wallet\\Lab_01\\Lab_01\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\dasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Андрій\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

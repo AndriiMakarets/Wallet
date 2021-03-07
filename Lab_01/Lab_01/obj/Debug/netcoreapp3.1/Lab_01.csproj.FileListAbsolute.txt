@@ -1,0 +1,13 @@
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\obj\Debug\netcoreapp3.1\Lab_01.csprojAssemblyReference.cache
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\obj\Debug\netcoreapp3.1\Lab_01.AssemblyInfoInputs.cache
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\obj\Debug\netcoreapp3.1\Lab_01.AssemblyInfo.cs
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\obj\Debug\netcoreapp3.1\Lab_01.csproj.CoreCompileInputs.cache
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\bin\Debug\netcoreapp3.1\Lab_01.exe
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\bin\Debug\netcoreapp3.1\Lab_01.deps.json
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\bin\Debug\netcoreapp3.1\Lab_01.runtimeconfig.json
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\bin\Debug\netcoreapp3.1\Lab_01.runtimeconfig.dev.json
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\bin\Debug\netcoreapp3.1\Lab_01.dll
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\bin\Debug\netcoreapp3.1\Lab_01.pdb
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\obj\Debug\netcoreapp3.1\Lab_01.dll
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\obj\Debug\netcoreapp3.1\Lab_01.pdb
+C:\Users\Андрій\source\repos\Wallet\Lab_01\Lab_01\obj\Debug\netcoreapp3.1\Lab_01.genruntimeconfig.cache
